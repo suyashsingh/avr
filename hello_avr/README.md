@@ -19,6 +19,7 @@ Copying Exsisting Flash
 avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:r:flash_backup.hex:i
 ```
 ##Links
-[Balau's Blog, for build commands] (https://balau82.wordpress.com/2011/03/29/programming-arduino-uno-in-pure-c/)
-[For Makefile] (https://www.tderflinger.com/en/arduino-blinking-led-pure-c)
+
+[Balau's Blog, for build commands](https://balau82.wordpress.com/2011/03/29/programming-arduino-uno-in-pure-c/)
+[For Makefile](https://www.tderflinger.com/en/arduino-blinking-led-pure-c)
 
