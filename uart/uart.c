@@ -17,7 +17,7 @@
 void uart_init()
 {
 	// disable uart power down
-	PRR |= (1 << PRUSART0);
+	PRR &= ~(1 << PRUSART0);
 
 	// set baud to 9600, UBRR = 0x68
 	UBRR0H = (unsigned char) (0x68 >> 8);
