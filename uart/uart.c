@@ -42,12 +42,25 @@ void tx_char(char c)
 	UDR0 = c;
 }
 
+void tx_str(char *s)
+{
+	char *t = s;
+	
+	while(*t != '\0') {
+		tx_char(*t);
+		t++;
+	}
+
+}
+
 int main()
 {
 	uart_init();
 
 	while(1) {
 		tx_char('a');
+		tx_str("Hello UART!\n");
+		tx_str("\033[31;1;4mHello\033[0m");
 		_delay_ms(TX_DELAY);
 	}
 
